@@ -50,7 +50,6 @@ let currentSong = 0;
 
 let isPlaying = false;
 
-/* Load Song */
 
 function loadSong(index){
 
@@ -66,7 +65,7 @@ function loadSong(index){
 
 }
 loadSong(currentSong);
-/* Play Selected Song */
+
 
 function playSelectedSong(index){
 
@@ -79,7 +78,6 @@ function playSelectedSong(index){
     isPlaying = true;
 
 }
-/* Play / Pause */
 
 playBtn.addEventListener("click", () => {
 
@@ -103,7 +101,7 @@ playBtn.addEventListener("click", () => {
 
 });
 
-/* Next Song */
+
 
 nextBtn.addEventListener("click", () => {
 
@@ -125,7 +123,6 @@ nextBtn.addEventListener("click", () => {
 
 });
 
-/* Previous Song */
 
 prevBtn.addEventListener("click", () => {
 
@@ -147,18 +144,15 @@ prevBtn.addEventListener("click", () => {
 
 });
 
-/* Progress Bar */
 
-/* Progress Bar + Time */
 
 audio.addEventListener("timeupdate", () => {
 
-    /* Progress */
 
     progress.value =
         (audio.currentTime / audio.duration) * 100 || 0;
 
-    /* Current Time */
+
 
     let currentMinutes =
         Math.floor(audio.currentTime / 60);
@@ -177,7 +171,7 @@ audio.addEventListener("timeupdate", () => {
 
 });
 
-/* Duration */
+
 
 audio.addEventListener("loadedmetadata", () => {
 
@@ -205,7 +199,7 @@ progress.addEventListener("input", () => {
 
 });
 
-/* Volume Control */
+
 
 volume.addEventListener("input", () => {
 
@@ -228,7 +222,7 @@ const autoplayBtn =
     document.getElementById("autoplay-btn");
 
 let autoplay = true;
-/* Autoplay Next Song */
+
 
 audio.addEventListener("ended", () => {
 
@@ -239,7 +233,7 @@ audio.addEventListener("ended", () => {
     }
 
 });
-/* Playlist Toggle */
+
 
 playlistBtn.addEventListener("click", () => {
 
@@ -258,7 +252,7 @@ playlistBtn.addEventListener("click", () => {
     }
 
 });
-/* Autoplay Toggle */
+
 
 autoplayBtn.addEventListener("click", () => {
 
@@ -277,7 +271,7 @@ autoplayBtn.addEventListener("click", () => {
     }
 
 });
-/* Volume Toggle */
+
 
 volumeBtn.addEventListener("click", () => {
 
